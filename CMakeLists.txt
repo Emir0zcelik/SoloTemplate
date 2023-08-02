@@ -10,9 +10,10 @@ project ("SoloTemplate")
 find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
+find_package(imgui CONFIG REQUIRED)
 
 add_executable(SoloTemplate "SoloTemplate.cpp" "SoloTemplate.h")
 
-target_link_libraries(SoloTemplate PRIVATE glad::glad glfw glm::glm) 
+target_link_libraries(SoloTemplate PRIVATE glad::glad glfw3 glm::glm imgui::imgui) 
 
 # TODO: Add tests and install targets if needed.
