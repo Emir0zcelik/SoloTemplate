@@ -11,3 +11,10 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <imgui.h>
+#include <stb_image.h>
+
+
+
+#include "src/renderer/VBO.h"
+#include "src/renderer/VBOLayout.h"
+#include "src/renderer/IBO.h"

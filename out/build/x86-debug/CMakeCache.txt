@@ -207,6 +207,9 @@ SoloTemplate_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 SoloTemplate_SOURCE_DIR:STATIC=C:/Users/JoyJacksoon/Desktop/SoloTemplate
 
+//Path to a file.
+Stb_INCLUDE_DIR:PATH=C:/Dev/vcpkg/installed/x86-windows/include
+
 //Automatically copy dependencies into the output directory for
 // executables.
 VCPKG_APPLOCAL_DEPS:BOOL=ON
@@ -410,6 +413,10 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Stb
+FIND_PACKAGE_MESSAGE_DETAILS_Stb:INTERNAL=[C:/Dev/vcpkg/installed/x86-windows/include][v()]
+//ADVANCED property for variable: Stb_INCLUDE_DIR
+Stb_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Install the dependencies listed in your manifest:
 //\n    If this is off, you will have to manually install your dependencies.
 //\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md
