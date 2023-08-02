@@ -32,7 +32,8 @@ public:
 
 	void Unbind() const;
 
-	//Set Uniforms
+	//TODO Set Uniforms
+
 
 private:
 	ShaderProgramSource ParseShader(const std::string& filepath);
