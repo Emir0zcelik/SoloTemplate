@@ -1,2 +1,2 @@
-# SoloTemplate
-Own renderer template for personal projects
+# Solo Renderer Template
+ -Solo Renderer- template for personal projects
