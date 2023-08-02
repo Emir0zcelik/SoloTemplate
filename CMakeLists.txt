@@ -13,7 +13,7 @@ find_package(glm CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 find_package(Stb REQUIRED)
 
-add_executable(SoloTemplate "SoloTemplate.cpp" "SoloTemplate.h")
+add_executable(SoloTemplate "SoloTemplate.cpp" "SoloTemplate.h" "src/renderer/VAO.h" "src/renderer/VAO.cpp" "src/renderer/Shader.h" "src/renderer/Shader.cpp")
 
 target_link_libraries(SoloTemplate PRIVATE glad::glad glfw glm::glm imgui::imgui ${Stb_INCLUDE_DIR}) 
 

@@ -13,8 +13,7 @@
 #include <imgui.h>
 #include <stb_image.h>
 
-
-
 #include "src/renderer/VBO.h"
 #include "src/renderer/VBOLayout.h"
 #include "src/renderer/IBO.h"
+#include "src/renderer/VAO.h"

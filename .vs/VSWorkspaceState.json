@@ -12,8 +12,12 @@
     ]
   },
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\renderer",
+    "\\src\\vendor",
+    "\\src\\vendor\\stb"
   ],
-  "SelectedNode": "\\SoloTemplate.cpp",
+  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
