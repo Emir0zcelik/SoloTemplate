@@ -1,9 +1,14 @@
 #pragma once
 
+#include <iostream>
+#include <fstream>
 #include <string>
+#include <sstream>
 #include <unordered_map>
 
+#include <glad/glad.h>
 #include <glm/glm.hpp>
+
 
 struct ShaderProgramSource {
 
