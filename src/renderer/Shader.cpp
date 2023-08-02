@@ -103,3 +103,4 @@ unsigned int Shader::GetUniformLocation(const std::string& name)
 {
 	return 0;
 }
+

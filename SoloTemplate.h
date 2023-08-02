@@ -5,9 +5,12 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
-#include <imgui.h>
 #include <stb_image.h>
 
+#include <imgui.h>
+#include "src/vendor/imgui/imgui_impl_glfw_gl3.h"
+
+#include "src/window_handling/Window.h"
 
 #include "src/renderer/VBO.h"
 #include "src/renderer/VBOLayout.h"

@@ -15,9 +15,8 @@
     "",
     "\\src",
     "\\src\\renderer",
-    "\\src\\vendor",
-    "\\src\\vendor\\stb"
+    "\\src\\vendor"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\SoloTemplate.cpp",
   "PreviewInSolutionExplorer": false
 }
