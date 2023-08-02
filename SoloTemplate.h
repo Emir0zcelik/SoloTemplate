@@ -17,3 +17,4 @@
 #include "src/renderer/VBOLayout.h"
 #include "src/renderer/IBO.h"
 #include "src/renderer/VAO.h"
+#include "src/renderer/Shader.h"
