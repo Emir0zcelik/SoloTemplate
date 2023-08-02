@@ -76,6 +76,15 @@ build CMakeFiles\SoloTemplate.dir\src\renderer\Shader.cpp.obj: CXX_COMPILER__Sol
   TARGET_COMPILE_PDB = CMakeFiles\SoloTemplate.dir\
   TARGET_PDB = SoloTemplate.pdb
 
+build CMakeFiles\SoloTemplate.dir\src\renderer\Renderer.cpp.obj: CXX_COMPILER__SoloTemplate_unscanned_Debug C$:\Users\JoyJacksoon\Desktop\SoloTemplate\src\renderer\Renderer.cpp || cmake_object_order_depends_target_SoloTemplate
+  DEFINES = -DGLFW_DLL
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -external:IC:\Dev\vcpkg\installed\x86-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\SoloTemplate.dir
+  OBJECT_FILE_DIR = CMakeFiles\SoloTemplate.dir\src\renderer
+  TARGET_COMPILE_PDB = CMakeFiles\SoloTemplate.dir\
+  TARGET_PDB = SoloTemplate.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SoloTemplate
@@ -84,7 +93,7 @@ build CMakeFiles\SoloTemplate.dir\src\renderer\Shader.cpp.obj: CXX_COMPILER__Sol
 #############################################
 # Link the executable SoloTemplate.exe
 
-build SoloTemplate.exe: CXX_EXECUTABLE_LINKER__SoloTemplate_Debug CMakeFiles\SoloTemplate.dir\SoloTemplate.cpp.obj CMakeFiles\SoloTemplate.dir\src\renderer\VAO.cpp.obj CMakeFiles\SoloTemplate.dir\src\renderer\Shader.cpp.obj | C$:\Dev\vcpkg\installed\x86-windows\debug\lib\glad.lib C$:\Dev\vcpkg\installed\x86-windows\debug\lib\glfw3dll.lib C$:\Dev\vcpkg\installed\x86-windows\debug\lib\imguid.lib
+build SoloTemplate.exe: CXX_EXECUTABLE_LINKER__SoloTemplate_Debug CMakeFiles\SoloTemplate.dir\SoloTemplate.cpp.obj CMakeFiles\SoloTemplate.dir\src\renderer\VAO.cpp.obj CMakeFiles\SoloTemplate.dir\src\renderer\Shader.cpp.obj CMakeFiles\SoloTemplate.dir\src\renderer\Renderer.cpp.obj | C$:\Dev\vcpkg\installed\x86-windows\debug\lib\glad.lib C$:\Dev\vcpkg\installed\x86-windows\debug\lib\glfw3dll.lib C$:\Dev\vcpkg\installed\x86-windows\debug\lib\imguid.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\Dev\vcpkg\installed\x86-windows\debug\lib\glad.lib  C:\Dev\vcpkg\installed\x86-windows\debug\lib\glfw3dll.lib  C:\Dev\vcpkg\installed\x86-windows\debug\lib\imguid.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
