@@ -22,8 +22,8 @@ add_executable(SoloTemplate
 	"src/window_handling/Window.cpp" "src/window_handling/Window.h" 
 	"src/vendor/imgui/imgui_impl_glfw_gl3.cpp" "src/vendor/imgui/imgui_impl_glfw_gl3.h"
 	"src/vendor/stb/stb_image.cpp"
+	"src/shaders/Shader.shader"
 )
 
 
 target_link_libraries(SoloTemplate PRIVATE glad::glad glfw glm::glm imgui::imgui ${Stb_INCLUDE_DIR}) 
-

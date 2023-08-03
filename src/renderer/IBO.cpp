@@ -3,6 +3,7 @@
 #define ASSERT(x) if(!(x)) __debugbreak();
 
 IBO::IBO(const unsigned int* data, unsigned int count)
+	:_count(count)
 {
 	ASSERT(sizeof(unsigned int) == sizeof(GLuint));
 

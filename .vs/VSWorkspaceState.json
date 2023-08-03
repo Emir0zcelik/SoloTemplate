@@ -15,8 +15,10 @@
     "",
     "\\src",
     "\\src\\renderer",
-    "\\src\\vendor"
+    "\\src\\shaders",
+    "\\src\\vendor",
+    "\\src\\window_handling"
   ],
-  "SelectedNode": "\\SoloTemplate.cpp",
+  "SelectedNode": "\\src\\shaders\\Shader.shader",
   "PreviewInSolutionExplorer": false
 }
