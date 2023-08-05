@@ -1,5 +1,8 @@
 ﻿#pragma once
 
+#include <direct.h>
+
+#include <string>
 #include <iostream>
 
 #include <glad/glad.h>

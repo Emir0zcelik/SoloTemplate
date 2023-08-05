@@ -2,9 +2,17 @@
 
 int main()
 {
+
+    char buffer[1024];
+
+    std::string currentDir = getcwd(buffer, 1024);
+
+    currentDir += ("/shaders/");
+
     Window windowObj;
     
     GLFWwindow* window = windowObj.InitWindow(800, 600, "Solo Renderer");
+
 
     float positions[] = {
     -0.5f, -0.5f,
@@ -29,7 +37,7 @@ int main()
 
     va.AddBuffer(vb, layout);
     
-    Shader shader("C:/Users/JoyJacksoon/Desktop/SoloTemplate/src/shaders/Shader.shader");
+    Shader shader(currentDir + "Shader.shader");
 
     shader.Bind();
 
