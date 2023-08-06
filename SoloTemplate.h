@@ -11,14 +11,14 @@
 #include <stb_image.h>
 
 #include <imgui.h>
-#include "src/vendor/imgui/imgui_impl_glfw_gl3.h"
+#include "x86-debug/src/vendor/imgui/imgui_impl_glfw_gl3.h"
 
-#include "src/window_handling/Window.h"
+#include "x86-debug/src/window_handling/Window.h"
 
-#include "src/renderer/VBO.h"
-#include "src/renderer/VBOLayout.h"
-#include "src/renderer/IBO.h"
-#include "src/renderer/VAO.h"
-#include "src/renderer/Shader.h"
-#include "src/renderer/Renderer.h"
-#include "src/renderer/Texture.h"
+#include "x86-debug/src/renderer/VBO.h"
+#include "x86-debug/src/renderer/VBOLayout.h"
+#include "x86-debug/src/renderer/IBO.h"
+#include "x86-debug/src/renderer/VAO.h"
+#include "x86-debug/src/renderer/Shader.h"
+#include "x86-debug/src/renderer/Renderer.h"
+#include "x86-debug/src/renderer/Texture.h"

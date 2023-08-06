@@ -1,0 +1,3 @@
+C:/Users/JoyJacksoon/Desktop/SoloTemplate/x86-debug/CMakeFiles/SoloTemplate.dir
+C:/Users/JoyJacksoon/Desktop/SoloTemplate/x86-debug/CMakeFiles/edit_cache.dir
+C:/Users/JoyJacksoon/Desktop/SoloTemplate/x86-debug/CMakeFiles/rebuild_cache.dir

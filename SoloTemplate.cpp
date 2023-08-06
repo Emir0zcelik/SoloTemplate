@@ -7,7 +7,7 @@ int main()
 
     std::string currentDir = getcwd(buffer, 1024);
 
-    currentDir += ("/shaders/");
+    currentDir += ("/src/shaders/");
 
     Window windowObj;
     

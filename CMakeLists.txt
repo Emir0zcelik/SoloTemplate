@@ -12,17 +12,17 @@ find_package(Stb REQUIRED)
 
 add_executable(SoloTemplate 
 	"SoloTemplate.cpp" "SoloTemplate.h" 
-	"src/renderer/VBO.cpp" "src/renderer/VBO.h"
-	"src/renderer/IBO.cpp" "src/renderer/IBO.h"
-	"src/renderer/VBOLayout.h"
-	"src/renderer/VAO.cpp" "src/renderer/VAO.h"
-	"src/renderer/Shader.cpp" "src/renderer/Shader.h"
-	"src/renderer/Texture.cpp" "src/renderer/Texture.h"
-	"src/renderer/Renderer.cpp" "src/renderer/Renderer.h"
-	"src/window_handling/Window.cpp" "src/window_handling/Window.h" 
-	"src/vendor/imgui/imgui_impl_glfw_gl3.cpp" "src/vendor/imgui/imgui_impl_glfw_gl3.h"
-	"src/vendor/stb/stb_image.cpp"
-	"src/shaders/Shader.shader"
+	"x86-debug/src/renderer/VBO.cpp" "x86-debug/src/renderer/VBO.h"
+	"x86-debug/src/renderer/IBO.cpp" "x86-debug/src/renderer/IBO.h"
+	"x86-debug/src/renderer/VBOLayout.h"
+	"x86-debug/src/renderer/VAO.cpp" "x86-debug/src/renderer/VAO.h"
+	"x86-debug/src/renderer/Shader.cpp" "x86-debug/src/renderer/Shader.h"
+	"x86-debug/src/renderer/Texture.cpp" "x86-debug/src/renderer/Texture.h"
+	"x86-debug/src/renderer/Renderer.cpp" "x86-debug/src/renderer/Renderer.h"
+	"x86-debug/src/window_handling/Window.cpp" "x86-debug/src/window_handling/Window.h" 
+	"x86-debug/src/vendor/imgui/imgui_impl_glfw_gl3.cpp" "x86-debug/src/vendor/imgui/imgui_impl_glfw_gl3.h"
+	"x86-debug/src/vendor/stb/stb_image.cpp"
+	"x86-debug/src/shaders/Shader.shader"
 )
 
 

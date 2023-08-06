@@ -1,0 +1,14 @@
+# ninja log v5
+11	95	7130327290740060	CMakeFiles/SoloTemplate.dir/src/renderer/IBO.cpp.obj	bc034cc98ec87c64
+34	305	7130327292730056	CMakeFiles/SoloTemplate.dir/src/vendor/stb/stb_image.cpp.obj	517d63085fd29293
+14	282	7130327292510056	CMakeFiles/SoloTemplate.dir/src/renderer/VAO.cpp.obj	c3919155aee0206
+21	712	7130327296910053	CMakeFiles/SoloTemplate.dir/src/renderer/Texture.cpp.obj	56cb9f4c724b090a
+8	444	7130327294230061	CMakeFiles/SoloTemplate.dir/src/renderer/VBO.cpp.obj	32ada8945fdcd668
+27	457	7130327294360053	CMakeFiles/SoloTemplate.dir/src/window_handling/Window.cpp.obj	f2ebf189320de0c3
+31	510	7130327294890064	CMakeFiles/SoloTemplate.dir/src/vendor/imgui/imgui_impl_glfw_gl3.cpp.obj	b2d541ed3d0fd6b9
+24	620	7130327295990066	CMakeFiles/SoloTemplate.dir/src/renderer/Renderer.cpp.obj	3aa89c1903b38a24
+17	660	7130327296390047	CMakeFiles/SoloTemplate.dir/src/renderer/Shader.cpp.obj	14c2991e3254b869
+10	452	7130328345258684	CMakeFiles/SoloTemplate.dir/SoloTemplate.cpp.obj	78e982ad3a3882ab
+453	863	7130328346398663	SoloTemplate.exe	eb5c139e821fda85
+3	413	7130330781254262	CMakeFiles/SoloTemplate.dir/SoloTemplate.cpp.obj	78e982ad3a3882ab
+414	785	7130330782054257	SoloTemplate.exe	eb5c139e821fda85
