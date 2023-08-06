@@ -1,13 +1,4 @@
 {
-  "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\renderer",
-    "\\src\\shaders",
-    "\\src\\vendor",
-    "\\src\\window_handling"
-  ],
-  "PreviewInSolutionExplorer": false,
   "OutputFoldersPerTargetSystem": {
     "Local Machine": [
       "x86-debug",
@@ -15,5 +6,11 @@
       "x86-release",
       "out\\install\\x86-release"
     ]
-  }
+  },
+  "ExpandedNodes": [
+    "",
+    "\\out\\build\\x64-debug"
+  ],
+  "SelectedNode": "\\README.md",
+  "PreviewInSolutionExplorer": false
 }
