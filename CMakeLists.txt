@@ -23,7 +23,7 @@ add_executable(SoloTemplate
 	"x86-debug/src/vendor/imgui/imgui_impl_glfw_gl3.cpp" "x86-debug/src/vendor/imgui/imgui_impl_glfw_gl3.h"
 	"x86-debug/src/vendor/stb/stb_image.cpp"
 	"x86-debug/src/shaders/Shader.shader"
-)
+ "x86-debug/src/tests/Test.h" "x86-debug/src/tests/TestSampleScene.h" "x86-debug/src/tests/TestSampleScene.cpp" "x86-debug/src/renderer/ShaderFolder.h" "x86-debug/src/renderer/ShaderFolder.cpp" "x86-debug/src/tests/Test.cpp")
 
 
 target_link_libraries(SoloTemplate PRIVATE glad::glad glfw glm::glm imgui::imgui ${Stb_INCLUDE_DIR}) 

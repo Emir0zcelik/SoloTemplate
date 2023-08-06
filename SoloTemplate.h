@@ -22,3 +22,5 @@
 #include "x86-debug/src/renderer/Shader.h"
 #include "x86-debug/src/renderer/Renderer.h"
 #include "x86-debug/src/renderer/Texture.h"
+#include "x86-debug/src/tests/TestSampleScene.h"
+
