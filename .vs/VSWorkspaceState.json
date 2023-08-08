@@ -9,8 +9,12 @@
   },
   "ExpandedNodes": [
     "",
-    "\\out\\build\\x64-debug"
+    "\\x86-debug",
+    "\\x86-debug\\res",
+    "\\x86-debug\\res\\imgs",
+    "\\x86-debug\\src",
+    "\\x86-debug\\src\\shaders",
+    "\\x86-debug\\src\\tests"
   ],
-  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

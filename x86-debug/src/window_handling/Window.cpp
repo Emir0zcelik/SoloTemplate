@@ -27,6 +27,9 @@ GLFWwindow* Window::InitWindow(int width, int height, std::string windowName)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(width, height, windowName.c_str(), NULL, NULL);
+
+    glfwSetWindowAttrib(window, GLFW_RESIZABLE, 0);
+
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;

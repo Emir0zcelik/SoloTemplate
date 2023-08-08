@@ -12,39 +12,24 @@ int main()
     ImGui_ImplGlfwGL3_Init(window, true);
     ImGui::StyleColorsDark();
 
-    test::Test* currentTest = nullptr;
-    test::TestMenu* menu = new test::TestMenu(currentTest);
-    currentTest = menu;
+    test::TestMainMenu* mainMenu = new test::TestMainMenu;
 
-    menu->RegisterTest<test::TestSampleScene>("Sample Scene");
+    mainMenu->SetWidth(800);
+    mainMenu->SetHeight(600);
+
+    test::TestSampleScene sampleScene;
 
     while (!glfwWindowShouldClose(window))
     {
-        windowObj.processInput(window);
-
         renderer.Clear();
+
+        windowObj.processInput(window);
 
         ImGui_ImplGlfwGL3_NewFrame();
         
-        if (currentTest)
-        {
-            currentTest->OnUpdate(0.0f);
-            currentTest->OnRender();
-
-            ImGui::Begin("Sample Scene");
-            ImGui::Text("(%.1f FPS)", ImGui::GetIO().Framerate);
-
-            if (currentTest != menu && ImGui::Button("<--"))
-            {
-                delete currentTest;
-                currentTest = menu;
-
-            }
-
-            currentTest->OnImGuiRender();
-
-            ImGui::End();
-        }
+        mainMenu->OnUpdate(0.0f);
+        mainMenu->OnRender();
+        mainMenu->OnImGuiRender();
 
         ImGui::Render();
         ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());

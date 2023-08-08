@@ -19,11 +19,13 @@ add_executable(SoloTemplate
 	"x86-debug/src/renderer/Shader.cpp" "x86-debug/src/renderer/Shader.h"
 	"x86-debug/src/renderer/Texture.cpp" "x86-debug/src/renderer/Texture.h"
 	"x86-debug/src/renderer/Renderer.cpp" "x86-debug/src/renderer/Renderer.h"
-	"x86-debug/src/window_handling/Window.cpp" "x86-debug/src/window_handling/Window.h" 
+	"x86-debug/src/window_handling/Window.cpp" "x86-debug/src/window_handling/Window.h"
+	"x86-debug/src/renderer/Folder.h" "x86-debug/src/renderer/Folder.cpp"
 	"x86-debug/src/vendor/imgui/imgui_impl_glfw_gl3.cpp" "x86-debug/src/vendor/imgui/imgui_impl_glfw_gl3.h"
 	"x86-debug/src/vendor/stb/stb_image.cpp"
-	"x86-debug/src/shaders/Shader.shader"
- "x86-debug/src/tests/Test.h" "x86-debug/src/tests/TestSampleScene.h" "x86-debug/src/tests/TestSampleScene.cpp" "x86-debug/src/renderer/ShaderFolder.h" "x86-debug/src/renderer/ShaderFolder.cpp" "x86-debug/src/tests/Test.cpp")
-
+	"x86-debug/src/shaders/Shader.shader" "x86-debug/src/shaders/MainMenu.shader"
+    "x86-debug/src/tests/Test.h" "x86-debug/src/tests/Test.cpp"
+	"x86-debug/src/tests/TestSampleScene.h" "x86-debug/src/tests/TestSampleScene.cpp"
+	"x86-debug/src/tests/TestMainMenu.h" "x86-debug/src/tests/TestMainMenu.cpp")
 
 target_link_libraries(SoloTemplate PRIVATE glad::glad glfw glm::glm imgui::imgui ${Stb_INCLUDE_DIR}) 
