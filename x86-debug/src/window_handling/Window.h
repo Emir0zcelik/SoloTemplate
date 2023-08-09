@@ -19,7 +19,6 @@ public:
 
 	~Window();
 
-
 	GLFWwindow* InitWindow(int width, int height, std::string windowName);
 
 	void processInput(GLFWwindow* window);

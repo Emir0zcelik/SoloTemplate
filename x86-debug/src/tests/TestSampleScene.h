@@ -2,14 +2,7 @@
 
 #include "Test.h"
 
-#include "../renderer/VBO.h"
-#include "../renderer/VBOLayout.h"
-#include "../renderer/IBO.h"
-#include "../renderer/VAO.h"
-#include "../renderer/Shader.h"
 #include "../renderer/Renderer.h"
-#include "../renderer/Texture.h"
-#include "../renderer/Folder.h"
 
 namespace test 
 {
@@ -30,6 +23,8 @@ namespace test
 			Shader _shader;
 			Renderer _renderer;
 			Texture _soloLogo;
+
+			bool _isSampleScene;
 		public:
 
 			TestSampleScene();
@@ -41,5 +36,7 @@ namespace test
 			void OnRender() override;
 
 			void OnImGuiRender() override;
+
+			inline bool GetIsSampleScene() { return _isSampleScene; }
 	};
 }

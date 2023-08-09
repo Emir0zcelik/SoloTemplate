@@ -24,7 +24,8 @@ namespace test
 		 _layout(),
 		 _shader(_currentDir + "/src/shaders/Shader.shader"),
 		 _renderer(),
-		 _soloLogo(_currentDir + "/res/imgs/Solo_Logo.png")
+		 _soloLogo(_currentDir + "/res/imgs/Solo_Logo.png"),
+		_isSampleScene(true)
 	{
 
 		_layout.Push<float>(2);
@@ -58,6 +59,50 @@ namespace test
 
 	void test::TestSampleScene::OnImGuiRender()
 	{
+		ImGuiWindowFlags window_flags_scene = 0;
+		window_flags_scene |= ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
+
+		ImGuiWindowFlags window_flags_properties = 0;
+		window_flags_properties |= ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
+
+
+		ImGui::SetNextWindowPos(ImVec2(0.0, 0.0));
+		ImGui::SetNextWindowSize(ImVec2(600, 600));
+
+		{
+			ImGui::Begin("Sample Scene", nullptr, window_flags_scene);
+
+			_isSampleScene = true;
+
+			{
+				ImGui::SetNextWindowPos(ImVec2(600.0, 0.0));
+				ImGui::SetNextWindowSize(ImVec2(200, 600));
+
+				ImGui::Begin("Properties", nullptr, window_flags_properties);
+
+				if (ImGui::Button("Exit to Main Menu", ImVec2(130, 30)))
+				{
+					_isSampleScene = false;
+				}
+
+				ImGui::End();
+			}
+
+			{
+				ImGui::SetNextWindowPos(ImVec2(0.0, 450.0));
+				ImGui::SetNextWindowSize(ImVec2(600, 150));
+
+				ImGui::Begin("Output", nullptr, window_flags_properties);
+
+				
+
+				ImGui::End();
+			}
+
+			ImGui::End();
+		}
+
+		ImGui::SetNextWindowPos(ImVec2(0.0, 0.0));
 
 	}
 }

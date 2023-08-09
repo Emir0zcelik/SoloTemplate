@@ -2,21 +2,15 @@
 
 #include "Test.h"
 
-
-#include "../renderer/VBO.h"
-#include "../renderer/VBOLayout.h"
-#include "../renderer/IBO.h"
-#include "../renderer/VAO.h"
-#include "../renderer/Shader.h"
 #include "../renderer/Renderer.h"
-#include "../renderer/Texture.h"
-#include "../renderer/Folder.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
 
 #include <GLFW/glfw3.h>
+
+#include "../tests/TestSampleScene.h"
 
 namespace test {
 
@@ -42,6 +36,9 @@ namespace test {
 
 
 		int _width, _height;
+
+		bool _isMainMenu, _isExit;
+
 	public:
 
 		TestMainMenu();
@@ -57,6 +54,12 @@ namespace test {
 		void SetWidth(int width);
 
 		void SetHeight(int height);
+
+		void SetIsMainMenu(bool isMainMenu);
+
+		inline bool GetIsExit() { return _isExit; }
+
+		inline bool GetIsMainMenu() { return _isMainMenu; }
 	};
 
 }

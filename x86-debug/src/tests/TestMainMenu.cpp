@@ -25,7 +25,9 @@ test::TestMainMenu::TestMainMenu()
 	_soloLogo(_currentDir + "/res/imgs/Solo_Logo.png"),
 	_width(0),
 	_height(0),
-	_proj(glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, -1.f, 1.f))
+	_proj(glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, -1.f, 1.f)),
+	_isMainMenu(true),
+	_isExit(false)
 {
 	_layout.Push<float>(2);
 	_layout.Push<float>(2);
@@ -73,14 +75,14 @@ void test::TestMainMenu::OnImGuiRender()
 	ImGui::SetCursorPos(ImVec2(200.0, 350.0));
 	if (ImGui::Button("Scene", ImVec2(100, 100)))
 	{
-		std::cout << "Main scene enter" << std::endl;
+		_isMainMenu = false;	
 	}
 
 	ImGui::SameLine();
 	ImGui::SetCursorPos(ImVec2(500.0, 350.0));
 	if (ImGui::Button("Exit", ImVec2(100, 100)))
 	{
-		std::cout << "BYE!" << std::endl;
+		_isExit = true;
 	}
 
 
@@ -95,6 +97,11 @@ void test::TestMainMenu::SetWidth(int width)
 void test::TestMainMenu::SetHeight(int height)
 {
 	_height = height;
+}
+
+void test::TestMainMenu::SetIsMainMenu(bool isMainMenu)
+{
+	_isMainMenu = isMainMenu;
 }
 
 

@@ -17,7 +17,7 @@ int main()
     mainMenu->SetWidth(800);
     mainMenu->SetHeight(600);
 
-    test::TestSampleScene sampleScene;
+    test::TestSampleScene* sampleScene = new test::TestSampleScene;
 
     while (!glfwWindowShouldClose(window))
     {
@@ -27,9 +27,29 @@ int main()
 
         ImGui_ImplGlfwGL3_NewFrame();
         
-        mainMenu->OnUpdate(0.0f);
-        mainMenu->OnRender();
-        mainMenu->OnImGuiRender();
+        
+        if (mainMenu->GetIsMainMenu())
+        {
+            mainMenu->OnUpdate(0.0f);
+            mainMenu->OnRender();
+            mainMenu->OnImGuiRender();
+        }
+
+        else
+        {
+            if (!sampleScene->GetIsSampleScene())
+                mainMenu->SetIsMainMenu(true);
+
+            sampleScene->OnUpdate(0.0f);
+            sampleScene->OnRender();
+            sampleScene->OnImGuiRender();
+        }
+        
+
+        if (mainMenu->GetIsExit())
+        {
+            return 0;
+        }
 
         ImGui::Render();
         ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());
