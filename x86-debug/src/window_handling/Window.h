@@ -7,6 +7,10 @@
 #include <iostream>
 #include <string>
 
+#include <stb_image.h>
+
+#include "../renderer/Folder.h"
+
 class Window
 {
 public:

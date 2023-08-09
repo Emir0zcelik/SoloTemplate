@@ -16,4 +16,5 @@ class Folder
 		~Folder();
 
 		inline std::string GetCWD() const { return _CWD; }
+
 };

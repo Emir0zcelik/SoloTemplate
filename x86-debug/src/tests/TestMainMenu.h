@@ -2,6 +2,7 @@
 
 #include "Test.h"
 
+
 #include "../renderer/VBO.h"
 #include "../renderer/VBOLayout.h"
 #include "../renderer/IBO.h"
@@ -10,6 +11,12 @@
 #include "../renderer/Renderer.h"
 #include "../renderer/Texture.h"
 #include "../renderer/Folder.h"
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
+
+#include <GLFW/glfw3.h>
 
 namespace test {
 
@@ -30,6 +37,8 @@ namespace test {
 		Shader _shader;
 		Renderer _renderer;
 		Texture _soloLogo;
+
+		glm::mat4 _proj;
 
 
 		int _width, _height;

@@ -4,10 +4,10 @@ test::TestMainMenu::TestMainMenu()
 	:_color { 0.2f, 0.3f, 0.7f, 1.0f  },
 
 	_positions{
-	   -0.5f, -0.5f, 0.0f, 0.0f,
-	   -0.5f,  0.5f, 0.0f, 1.0f,
-		0.5f, -0.5f, 1.0f, 0.0f,
-		0.5f,  0.5f, 1.0f, 1.0f,
+	    200.0f, 300.0f, 0.0f, 0.0f, // Down Left Corner
+		200.0f, 500.0f, 0.0f, 1.0f, // Up Left Corner
+		600.0f, 300.0f, 1.0f, 0.0f, // Down Right Corner
+		600.0f, 500.0f, 1.0f, 1.0f, // Up Right Corner
 	},
 
 	_indices{
@@ -24,9 +24,9 @@ test::TestMainMenu::TestMainMenu()
 	_renderer(),
 	_soloLogo(_currentDir + "/res/imgs/Solo_Logo.png"),
 	_width(0),
-	_height(0)
+	_height(0),
+	_proj(glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, -1.f, 1.f))
 {
-
 	_layout.Push<float>(2);
 	_layout.Push<float>(2);
 	_va.AddBuffer(_vb, _layout);
@@ -49,6 +49,8 @@ void test::TestMainMenu::OnUpdate(float deltaTime)
 void test::TestMainMenu::OnRender()
 {
 	_renderer.Clear();
+
+	_shader.SetUniformMat4f("u_MVP", _proj);
 
 	_soloLogo.Bind();
 	_shader.SetUniform1i("u_Texture", 0);
