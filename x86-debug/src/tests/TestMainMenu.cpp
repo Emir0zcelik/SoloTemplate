@@ -52,6 +52,13 @@ void test::TestMainMenu::OnRender()
 {
 	_renderer.Clear();
 
+
+	glm::mat4 trans = glm::mat3(1.0f);
+	trans = glm::translate(trans, glm::vec3(0.0f, 0.0f, 0.0f));
+	trans = glm::scale(trans, glm::vec3(0.75, 0.75, 0.75));
+	trans = glm::rotate(trans, (float)glfwGetTime() / 2, glm::vec3(0.0f, 1.0f, 0.0f));
+
+	_shader.SetUniformMat4f("u_Transform", trans);
 	_shader.SetUniformMat4f("u_MVP", _proj);
 
 	_soloLogo.Bind();

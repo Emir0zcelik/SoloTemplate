@@ -6,15 +6,15 @@ namespace test
 		:_color { 0.2f, 0.3f, 0.7f, 1.0f  },
 
 		 _positions{
-			-0.5f, -0.5f, 0.0f, 0.0f,
-			-0.5f,  0.5f, 0.0f, 1.0f,
-			 0.5f, -0.5f, 1.0f, 0.0f, 
-			 0.5f,  0.5f, 1.0f, 1.0f,
+			 200.0f, 300.0f, 0.0f, 0.0f, // Down Left Corner
+			 300.0f, 500.0f, 0.0f, 1.0f, // Up Left Corner
+			 400.0f, 300.0f, 1.0f, 0.0f, // Down Right Corner
+										 // Up Right Corner
 	     },
 
 		 _indices{
 			 0, 1, 2,
-			 1, 3, 2
+
 		 },
 
 		 _currentDir(_folder.GetCWD()),
@@ -25,7 +25,8 @@ namespace test
 		 _shader(_currentDir + "/src/shaders/Shader.shader"),
 		 _renderer(),
 		 _soloLogo(_currentDir + "/res/imgs/Solo_Logo.png"),
-		_isSampleScene(true)
+		_isSampleScene(true),
+		_proj(glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, -1.f, 1.f))
 	{
 
 		_layout.Push<float>(2);
@@ -49,8 +50,8 @@ namespace test
 	void test::TestSampleScene::OnRender()
 	{
 		_renderer.Clear();
-		
-		
+
+		_shader.SetUniformMat4f("u_MVP", _proj);
 		_shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.7f, 1.0f);
 		_soloLogo.Bind();
 		_shader.SetUniform1i("u_Texture", 0);

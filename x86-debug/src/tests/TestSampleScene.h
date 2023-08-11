@@ -4,6 +4,10 @@
 
 #include "../renderer/Renderer.h"
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 namespace test 
 {
 	class TestSampleScene : public Test
@@ -23,6 +27,7 @@ namespace test
 			Shader _shader;
 			Renderer _renderer;
 			Texture _soloLogo;
+			glm::mat4 _proj;
 
 			bool _isSampleScene;
 		public:
