@@ -27,7 +27,11 @@ namespace test
 			Shader _shader;
 			Renderer _renderer;
 			Texture _soloLogo;
+			
 			glm::mat4 _proj;
+			glm::mat4 _view;
+			glm::mat4 _model;
+			glm::mat4 _mvp;
 
 			bool _isSampleScene;
 		public:
