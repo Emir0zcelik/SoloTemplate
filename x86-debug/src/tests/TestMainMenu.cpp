@@ -4,10 +4,10 @@ test::TestMainMenu::TestMainMenu()
 	:_color { 0.2f, 0.3f, 0.7f, 1.0f  },
 
 	_positions{
-	    200.0f, 300.0f, 0.0f, 0.0f, // Down Left Corner
-		200.0f, 500.0f, 0.0f, 1.0f, // Up Left Corner
-		600.0f, 300.0f, 1.0f, 0.0f, // Down Right Corner
-		600.0f, 500.0f, 1.0f, 1.0f, // Up Right Corner
+	    300.0f, 400.0f, 0.0f, 0.0f, // Down Left Corner
+		300.0f, 600.0f, 0.0f, 1.0f, // Up Left Corner
+		700.0f, 400.0f, 1.0f, 0.0f, // Down Right Corner
+		700.0f, 600.0f, 1.0f, 1.0f, // Up Right Corner
 	},
 
 	_indices{
@@ -28,7 +28,7 @@ test::TestMainMenu::TestMainMenu()
 	_isMainMenu(true),
 	_isExit(false),
 
-	_proj(glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, -1.f, 1.f)),
+	_proj(glm::ortho(0.0f, 1000.0f, 0.0f, 750.0f, -1.0f, 1.0f)),
 	_view(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
 	_model(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
 	_mvp(_proj* _view* _model)
@@ -67,6 +67,7 @@ void test::TestMainMenu::OnRender()
 
 	_soloLogo.Bind();
 	_shader.SetUniform1i("u_Texture", 0);
+	glViewport(0, 0, 1000, 750);
 	_renderer.Draw(_va, _ib, _shader);
 }
 

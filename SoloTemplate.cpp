@@ -4,7 +4,7 @@ int main()
 {
     Window windowObj;
     
-    GLFWwindow* window = windowObj.InitWindow(800, 600, "Solo Renderer");
+    GLFWwindow* window = windowObj.InitWindow(1000 , 750, "Solo Renderer");
     
     Renderer renderer;
 
@@ -14,8 +14,8 @@ int main()
 
     test::TestMainMenu* mainMenu = new test::TestMainMenu;
 
-    mainMenu->SetWidth(800);
-    mainMenu->SetHeight(600);
+    mainMenu->SetWidth(1000);
+    mainMenu->SetHeight(750);
 
     test::TestSampleScene* sampleScene = new test::TestSampleScene;
 
