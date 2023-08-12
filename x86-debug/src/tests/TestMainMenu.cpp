@@ -25,9 +25,13 @@ test::TestMainMenu::TestMainMenu()
 	_soloLogo(_currentDir + "/res/imgs/Solo_Logo.png"),
 	_width(0),
 	_height(0),
-	_proj(glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, -1.f, 1.f)),
 	_isMainMenu(true),
-	_isExit(false)
+	_isExit(false),
+
+	_proj(glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, -1.f, 1.f)),
+	_view(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
+	_model(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
+	_mvp(_proj* _view* _model)
 {
 	_layout.Push<float>(2);
 	_layout.Push<float>(2);
@@ -55,11 +59,11 @@ void test::TestMainMenu::OnRender()
 
 	glm::mat4 trans = glm::mat3(1.0f);
 	trans = glm::translate(trans, glm::vec3(0.0f, 0.0f, 0.0f));
-	trans = glm::scale(trans, glm::vec3(0.75, 0.75, 0.75));
+	trans = glm::scale(trans, glm::vec3(0.75f, 0.75f, 0.75f));
 	trans = glm::rotate(trans, (float)glfwGetTime() / 2, glm::vec3(0.0f, 1.0f, 0.0f));
 
 	_shader.SetUniformMat4f("u_Transform", trans);
-	_shader.SetUniformMat4f("u_MVP", _proj);
+	_shader.SetUniformMat4f("u_MVP", _mvp);
 
 	_soloLogo.Bind();
 	_shader.SetUniform1i("u_Texture", 0);
@@ -76,17 +80,17 @@ void test::TestMainMenu::OnImGuiRender()
 
 	ImGui::Begin("Main Menu", nullptr, window_flags);
 
-	ImGui::SetCursorPos(ImVec2(720, 0.0));
+	ImGui::SetCursorPos(ImVec2(920.0, 0.0));
 	ImGui::Text("(%.1f FPS)", ImGui::GetIO().Framerate);
 
-	ImGui::SetCursorPos(ImVec2(200.0, 350.0));
+	ImGui::SetCursorPos(ImVec2(300.0, 500.0));
 	if (ImGui::Button("Scene", ImVec2(100, 100)))
 	{
 		_isMainMenu = false;	
 	}
 
 	ImGui::SameLine();
-	ImGui::SetCursorPos(ImVec2(500.0, 350.0));
+	ImGui::SetCursorPos(ImVec2(600.0, 500.0));
 	if (ImGui::Button("Exit", ImVec2(100, 100)))
 	{
 		_isExit = true;
@@ -110,5 +114,3 @@ void test::TestMainMenu::SetIsMainMenu(bool isMainMenu)
 {
 	_isMainMenu = isMainMenu;
 }
-
-
